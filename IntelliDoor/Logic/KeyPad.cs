@@ -37,6 +37,8 @@ namespace IntelliDoor.Logic
 
         public void GetAparmentNumber()
         {
+            OnReset?.Invoke();
+            aptNum = "";
             keypad.StartListening(ParseInput);
         }
 
